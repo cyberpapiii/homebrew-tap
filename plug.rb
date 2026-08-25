@@ -1,26 +1,18 @@
 class Plug < Formula
   desc "MCP multiplexer - one config, every AI client connected, every server shared"
   homepage "https://github.com/cyberpapiii/plug"
-  version "0.6.4"
+  version "0.7.0"
   license "Apache-2.0"
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.4/plug-mcp-aarch64-apple-darwin.tar.gz"
-      sha256 "360ef28d5f6d41797b92ea49a5d90d2bb63d8519156e27b47fd3b4fb10b40b84"
-    else
-      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.4/plug-mcp-x86_64-apple-darwin.tar.gz"
-      sha256 "bd5d1e0d2f978ff7511ce2b45229495999723ba15a3f6058fb76b21e4a52b76c"
-    end
-  end
+  depends_on :linux
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.4/plug-mcp-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0daa321bb702e8341a786aa9092d42fe0b13518ece04bfbbce48ba5382e830d9"
+      url "https://github.com/cyberpapiii/plug/releases/download/v0.7.0/plug-mcp-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "a18f5a01848cca52cc2e821a96f118a3a62847ae1fbcf8b5745a154c37e05dc3"
     else
-      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.4/plug-mcp-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4a80b8c4cc305388bea848694fe6cc46a03dd3ca212a5b417032bd6d8f39dc2c"
+      url "https://github.com/cyberpapiii/plug/releases/download/v0.7.0/plug-mcp-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "fecf42be2ceeee48d21c9e88008df1084e112e326d55c8acfa76fd2e5be5c151"
     end
   end
 
@@ -29,6 +21,6 @@ class Plug < Formula
   end
 
   test do
-    assert_match "plug 0.6.4", shell_output("#{bin}/plug --version")
+    assert_match "plug 0.7.0", shell_output("#{bin}/plug --version")
   end
 end
