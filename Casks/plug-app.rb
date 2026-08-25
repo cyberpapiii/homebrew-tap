@@ -1,8 +1,8 @@
 cask "plug-app" do
-  version "0.5.3"
-  sha256 "faa003038c1d9fe5400a2d4a5227bc75a3c6a6401240234226c7b234d8a1f003"
+  version "0.6.0"
+  sha256 "cc8396a83b95338ba23e02b56b073c64ec50fcfc3f3f2483a23c64d9e13d512b"
 
-  url "https://github.com/cyberpapiii/plug/releases/download/v0.5.3/Plug-0.5.3.dmg"
+  url "https://github.com/cyberpapiii/plug/releases/download/v0.6.0/Plug-0.6.0.dmg"
   name "Plug"
   desc "Calm macOS control surface for the Plug MCP multiplexer"
   homepage "https://github.com/cyberpapiii/plug"
