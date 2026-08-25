@@ -1,26 +1,26 @@
 class Plug < Formula
   desc "MCP multiplexer - one config, every AI client connected, every server shared"
   homepage "https://github.com/cyberpapiii/plug"
-  version "0.6.2"
+  version "0.6.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.2/plug-mcp-aarch64-apple-darwin.tar.gz"
-      sha256 "63fb162459ffc5ea3e43ceb26c2b468b5f3f4241806d7fd8ef2fd5167e01be39"
+      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.3/plug-mcp-aarch64-apple-darwin.tar.gz"
+      sha256 "d71cef46486a69842e19cf78c42158e0c0551cd0e80a4388304f5cc5e9a91d14"
     else
-      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.2/plug-mcp-x86_64-apple-darwin.tar.gz"
-      sha256 "8d0bfbc8856ab82c515faae84dd794f1fa7a37cff612dc9b287f17d51fd7f5a6"
+      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.3/plug-mcp-x86_64-apple-darwin.tar.gz"
+      sha256 "5c669a1313d3fe5cd8d77045cb22e2fd0b6e9e20cdf5803a9f9fd5d02005e466"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.2/plug-mcp-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "730ce77445d0ec1156027fed80d0b05b3b72ff0dddee8276cb8ae3b2c37e8c95"
+      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.3/plug-mcp-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "fe0b2f6ae10d616660f2db104066034f13c2c59b8613dc45e446213d338ee054"
     else
-      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.2/plug-mcp-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b0809486faa1c86ae9ee9686fd307187a212bfd161876d89ca27179112f56664"
+      url "https://github.com/cyberpapiii/plug/releases/download/v0.6.3/plug-mcp-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "79e867dc7c9a63926a7038cef6f1e71e9700d1d6001de4b98f1dcfff40848c97"
     end
   end
 
@@ -29,6 +29,6 @@ class Plug < Formula
   end
 
   test do
-    assert_match "plug 0.6.2", shell_output("#{bin}/plug --version")
+    assert_match "plug 0.6.3", shell_output("#{bin}/plug --version")
   end
 end
