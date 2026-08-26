@@ -1,18 +1,18 @@
 class Plug < Formula
   desc "MCP multiplexer - one config, every AI client connected, every server shared"
   homepage "https://github.com/cyberpapiii/plug"
-  version "0.7.3"
+  version "0.7.4"
   license "Apache-2.0"
 
   depends_on :linux
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/cyberpapiii/plug/releases/download/v0.7.3/plug-mcp-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "105a89f7d26267679dbd145d4c19c556cae8eb11465017a505c4f333337a5cfe"
+      url "https://github.com/cyberpapiii/plug/releases/download/v0.7.4/plug-mcp-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "e039a9e6e5817c08476ac8d1fce7f1a344756705705388bfb0bb5ec33cc66e4d"
     else
-      url "https://github.com/cyberpapiii/plug/releases/download/v0.7.3/plug-mcp-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "43bf814dca3c62a7940e1e59616895be98825cf157c2012c8f346bcd02a90ac4"
+      url "https://github.com/cyberpapiii/plug/releases/download/v0.7.4/plug-mcp-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "07f5b7c773df68b6383062a4dffac0d00d3d561cc34849eef86aefe8c0d4325b"
     end
   end
 
@@ -21,6 +21,6 @@ class Plug < Formula
   end
 
   test do
-    assert_match "plug 0.7.3", shell_output("#{bin}/plug --version")
+    assert_match "plug 0.7.4", shell_output("#{bin}/plug --version")
   end
 end
