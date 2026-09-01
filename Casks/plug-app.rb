@@ -1,6 +1,6 @@
 cask "plug-app" do
-  version "0.8.10"
-  sha256 "9ee5033613e792cee1bd7f1d75d7e8f0818124ac06dfbe439ca5b67deaa3fb89"
+  version "0.8.11"
+  sha256 "2c58c2259f778254796bb13db3e4966a5c53b852d87976c29436e18c0f2ee1c9"
 
   url "https://github.com/cyberpapiii/plug/releases/download/v#{version}/Plug-#{version}.dmg"
   name "Plug"
