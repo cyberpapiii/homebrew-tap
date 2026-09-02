@@ -1,12 +1,19 @@
 class ImessageMax < Formula
   desc "MCP server for iMessage - AI assistant integration"
   homepage "https://github.com/cyberpapiii/imessage-max"
-  url "https://github.com/cyberpapiii/imessage-max/releases/download/v1.2.1/imessage-max-macos.tar.gz"
-  sha256 "7fd3312c30f8f170f75f985f49aacb59533d3b12b1c09eb257cbcf67555c3032"
+  version "1.5.0"
+  url "https://github.com/cyberpapiii/imessage-max/releases/download/v1.5.0/imessage-max-macos.tar.gz"
+  # sha256 of the ad-hoc-signed imessage-max-macos.tar.gz built from v1.5.0.
+  # Regenerate with `shasum -a 256 imessage-max-macos.tar.gz` if the asset is
+  # ever rebuilt. The tarball must be ad-hoc signed (`codesign --sign -`),
+  # not signed with the local "iMessage Max Dev" identity, which no other
+  # machine trusts.
+  sha256 "67506beed6266c83714fb844cff22a824af2d6d03960096570328ebf664fe72d"
   license "MIT"
 
   depends_on :macos
-  depends_on macos: :ventura
+  depends_on macos: :sequoia
+  depends_on arch: :arm64
 
   def install
     bin.install "imessage-max"
