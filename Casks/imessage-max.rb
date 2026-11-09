@@ -1,6 +1,6 @@
 cask "imessage-max" do
-  version "2.0.0"
-  sha256 "a7c711779d131d88f52eb3b1a8e7069db9e7bb275542feb4c2329ac749e0d301"
+  version "2.1.0"
+  sha256 "7cc409b0b135b5ad9a6ca8a96bdd4a378881be6aac5ed7f5657e2e4fb0fa0638"
 
   url "https://github.com/cyberpapiii/imessage-max/releases/download/v#{version}/iMessage-Max-#{version}.dmg"
   name "iMessage Max"
@@ -14,7 +14,7 @@ cask "imessage-max" do
   binary "#{appdir}/iMessage Max.app/Contents/MacOS/imessage-max"
 
   uninstall quit:   "com.cyberpapiii.imessage-max.menubar",
-            signal: ["TERM", "com.cyberpapiii.imessage-max.helper"]
+            signal: ["USR1", "com.cyberpapiii.imessage-max.helper"]
 
   zap launchctl: "com.cyberpapiii.imessage-max.helper",
       trash:     [
